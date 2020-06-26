@@ -14,13 +14,12 @@ import java.util.*;
 
 public class Main {
 
-    int cCount = 0;
-    int sCount = 0;
+    int cCount = 2;
+    int sCount = 2;
 
     public static void main(String[] args) {
 
-        double subTotal;
-        double orderTotal = 0;
+
 
         // Main object
         Main main = new Main();
@@ -53,6 +52,18 @@ public class Main {
         iList.add(inv3);
         iList.add(inv4);
 
+        Customer cus1 = new Customer(1,"Sam Ronalds", "(717) 429-1234", "1234 Demo 1 Street, mechanicsburg Pa, 17050");
+        Customer cus2 = new Customer(2,"Will Parker", "(717) 323-4234", "1235 Demo 2 Street, enola Pa, 17025");
+
+        cList.add(cus1);
+        cList.add(cus2);
+
+        salesPerson sP1 = new salesPerson(1, "Jack Donald", "(717) 379-2323", "1236 Demo 3 Street, Harrisburg Pa, 17012");
+        salesPerson sP2 = new salesPerson(2, "Chris Evans", "(715) 353-2334", "1237 Demo 4 Street, Middletown Pa, 17143");
+
+        sList.add(sP1);
+        sList.add(sP2);
+
 
         System.out.println("---------------------------------------------------------");
         System.out.println("                   Car Dealership                        ");
@@ -62,17 +73,16 @@ public class Main {
 
         final char CUST_CODE = '1'; //customer page
         final char PRINT_CUST = '2'; //print cust
-        final char INV_CODE = '3'; //inventory page
-        //final char SALES_CODE = '4'; //sales person
-        final char ORDER_CODE = '4'; //order page
-        final char TRANS_CODE = '5'; //transaction page
+        final char INV_CODE = '5'; //inventory page
+        final char ORDER_CODE = '6'; //order page
+        final char TRANS_CODE = '7'; //transaction page
         final char EXIT_CODE = 'E';
-        final char S_CODE = 'S';
-        final char SP_CODE = '6';
+        final char S_CODE = '3';
+        final char SP_CODE = '4';
         char userAction;
 
 
-        final String PROMPT_ACTION = "\nMAIN MENU: \n1 - Add Customer\n2 - Print Customers\n3 - Inventory Page\n4 - Sell Car\n5 - Transaction Page\nS - Add Employee\n6 - Print Employees\nE - Exit\nPlease Enter your Selection: ";
+        final String PROMPT_ACTION = "\nMAIN MENU: \n1 - Add Customer\n2 - Print Customers\n3 - Add Employee\n4 - Print Employees\n5 - Inventory Page\n6 - Sell Car\n7 - Transaction Page\nE - Exit\nPlease Enter your Selection: ";
 
         userAction = getAction(PROMPT_ACTION);
 

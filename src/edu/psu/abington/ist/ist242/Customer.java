@@ -18,7 +18,12 @@ public class Customer extends User {
         setUserId(userId);
     }
 
-
+    public Customer(int userId, String userName, String phone, String address){
+        setUserId(userId);
+        setUserName(userName);
+        setUserPhone(phone);
+        setUserAddress(address);
+    }
     public Customer(){}
 
 

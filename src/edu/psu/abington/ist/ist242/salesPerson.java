@@ -19,6 +19,12 @@ public class salesPerson extends User {
 
     public salesPerson()
     {}
+    public salesPerson(int userId, String userName, String phone, String address){
+        setUserId(userId);
+        setUserName(userName);
+        setUserPhone(phone);
+        setUserAddress(address);
+    }
     public static void printSalesPerson(ArrayList<salesPerson> sList){
         for (salesPerson sPerson: sList){
             System.out.printf("%-15s | %-15s | %-15s | %-15s\n", sPerson.getUserId(), sPerson.getUserName(), sPerson.getUserPhone(), sPerson.getUserAddress());
